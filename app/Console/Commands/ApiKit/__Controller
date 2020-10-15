@@ -1,0 +1,82 @@
+<?php
+
+namespace App\Http\Controllers\Api\V2;
+
+use App\Models\{{NAME}};
+use App\Http\Requests\Api\V2\{{NAME}}Request;
+use App\Repositories\{{NAME}}Repository;
+use App\Http\Requests\Api\V2\SearchRequest;
+use App\Services\{{NAME}}Service;
+use App\Services\UsersService;
+use Auth;
+
+class {{NAME}}Controller extends Controller
+{
+    protected $usersService;
+    
+    public function __construct(UsersService $usersService)
+    {
+        $this->usersService = $usersService;
+    }
+    
+    public function can($type)
+    {
+        return $this->usersService->can("menu.main.{{table}}.$type",Auth::user()->organization_id);
+    }
+    
+    /**
+     * Возвращает список всех {{NAME}}
+     */
+    public function index(SearchRequest $request, {{NAME}}Service $service){
+        return $service->index();
+    }
+
+    /**
+     * Создает новую запись в таблице {{NAME}}
+     */
+    public function store({{NAME}}Request $request, {{NAME}}Service $service)
+    {
+        $data = $request->validated();
+        ${{item}} = $service->create($data, true);
+        return ${{item}};
+    }
+
+    /**
+     * Возвращает {{NAME}} по ID
+     */
+    public function show($id, {{NAME}}Repository $repository)
+    {
+        ${{item}} = $repository->find($id);
+        if (!${{item}}) {
+            return $this->errorResponse('Не найдено', 404, ['{{item}}'=>'{{NAME}} с ID '.$id.' не существует']);
+        }
+        return ${{item}};
+    }
+
+    /**
+     * Редактирует {{NAME}} по ID
+     */
+    public function update($id, {{NAME}}Request $request, {{NAME}}Service $service, {{NAME}}Repository $repository)
+    {
+        ${{item}} = $repository->find($id);
+        if (!${{item}}) {
+            return $this->errorResponse('Не найдено', 404, ['{{item}}'=>'{{NAME}} с ID '.$id.' не существует']);
+        }
+        $data = $request->validated();
+        ${{item}} = $service->update($id, $data, true);
+        return ${{item}};
+    }
+
+    /**
+     * Удаляет {{NAME}} по ID
+     */
+    public function destroy($id, {{NAME}}Repository $repository)
+    {
+        ${{item}} = $repository->find($id);
+        if (!${{item}}) {
+            return $this->errorResponse('Не найдено', 404, ['{{item}}'=>'{{NAME}} с ID '.$id.' не существует']);
+        }
+        $repository->deleteFromIndex(${{item}});
+        return $repository->delete($id);
+    }
+}

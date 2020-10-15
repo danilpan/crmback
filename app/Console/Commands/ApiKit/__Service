@@ -1,0 +1,71 @@
+<?php
+namespace App\Services;
+
+use App\Repositories\{{NAME}}Repository;
+use App\Models\{{NAME}};
+use App\Models\User;
+use RuntimeException;
+use Auth;
+use App\Queries\PermissionQuery;
+
+class {{NAME}}Service extends Service
+{
+    protected $repository;
+    protected $permissionQuery;
+
+    public function __construct({{NAME}}Repository $repository, PermissionQuery $permissionQuery)
+    {
+        $this->repository = $repository;
+        $this->permissionQuery = $permissionQuery;
+    }
+    
+    public function index(){
+        $list = $this->repository->all();
+        return $list;
+    }
+    
+    public function create($data, $reindex = false)
+    {
+        ${{item}} = $this->repository->create($data);
+
+        if (${{item}}) {
+            if ($reindex) {
+                $this->repository->reindexModel(${{item}}, true);
+            }
+            return ${{item}};
+        }
+        return false;
+    }
+
+    public function update($id, $data, $reindex = false)
+    {
+        $data = $this->repository->update($data, $id);
+        if ($data) {
+            ${{item}} = $this->repository->find($id);
+            
+            if ($reindex) {
+                $this->repository->reindexModel(${{item}}, true);
+            }
+        }
+        
+        return $data;
+    }
+
+    protected function getSearchRepository()
+    {
+        return $this->repository;
+    }
+
+    protected function addSearchConditions(User $user=null, array $filters=null)
+    {
+        return $filters;
+    }
+
+    protected function getPermissionQuery(){
+        return $this->permissionQuery;
+    }
+
+    protected function getExportToExcelLib(){
+        return null;
+    }
+}

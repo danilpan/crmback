@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+
+class Entity extends Model
+{
+
+
+	 protected $fillable = [
+		'id',
+		'name'
+	];
+
+	protected $primaryKey = 'id';
+
+    protected $table = 'entities';
+
+}

@@ -1,0 +1,65 @@
+- rotar o (Орг) - id 2
+	- Орлеан. менеджеры по продажам - id 3
+	- Предприниматели - id 7
+	- Бухгалтерия глобальная - id 19
+	- Маркетологи глобальные - id 21
+	- Менеджмент кц глобальный - id 26
+	- Системные администраторы - id 27
+	- Орлеан старшие менеджеры по продажам - id 51
+	- мл црм (Орг) - id 47
+		- Админы логисты - id 48
+	 	- Админы фрод - id 53
+	 	- Аквабронь - id 137
+	- rekl pro kz  hisamutdinov n (Орг) - id 66
+		- Reklprokz менеджера по продажам - id 68
+		- Rekl pro kz бухгалтер - id 69
+		- Rekl pro kz кладовщик hisamutdinov - id 70
+		- Rekl pro kz маркетолог - id 71
+		- Менеджмент по организации hisamutdinov n - id 85
+		- отдел логистики хис (Орг) - id 88
+			- Rekl pro kz логист hisamutdinov - id 72
+			- Админы логисты kg - id 109
+	- rekl pro ru belkin g (Орг) - id 67
+		- менеджер по прадажам нижний новгород - id 73
+		- Rekl pro ru бухгалтер - id 74
+		- Rekl pro ru кладовщик belkin g - id 75
+		- Rekl pro ru маркетолог - id 76
+		- Rekl pro ru логист - id 77
+		- Отдел логистики белкина (Орг) - id 82
+			- Rekl pro ru beikin админы казахстан - id 119
+		- Polimentor - менеджеры по продажам - id 110
+		- Супервайзер полиментор - id 111
+		- Premiumcall - id 112
+		- Premiumcall менеджеры по продажам - id 113
+		- 1c developers - id 116
+		- Rekl pro менеджеры казахстан - id 117
+		- Rekl pro ru belkin g тим лидеры кц казахста - id 118
+		- Kingcall - супервайзер - id 120
+		- Kingcall - менеджеры по продажам - id 121
+		- Business optima - супервайзер - id 122
+		- Business optima - менеджеры по продажам - id 123
+		- Алматинский кц - id 126
+		- Rekl pro спецназ менеджеров казахстана для рф - id 129
+		- Hardcoll - супервайзер - id 131
+		- Hardcoll - менеджеры по продажам - id 132
+		- купальники (Орг) - id 143
+			- Тим-лидеры  - id 144
+			- Операторы - id 145
+			- Логисты - id 146
+		- Кц азербайджан белкин - id 148
+		- Кц уштобе - id 152
+		- Менеджмент белкина - id 154
+		- Скриптологи белкина - id 155
+		- оптовик (Орг) - id 149
+			- логисты - id 150
+	- rekl pro kg hisamutdinov (Орг) - id 101
+		- Reklprokg менеджера по продажам - id 102
+		- Rekl pro kg бухгалтер - id 103
+		- Rekl pro kg кладовщик hisamutdinov - id 104 
+		- Rekl pro kg маркетолог - id 105
+		- Rekl pro kg логист hisamutdinov - id 106
+	- орг.трудоустройства (Орг) - id 124
+	- трудоустройство алмата (Орг) - id 139
+	- world wide (Орг) - id 151
+	- worldwide - reklpro (Орг) - id 159
+	- чукилев (Орг) - id 161

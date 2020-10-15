@@ -1,0 +1,34 @@
+<?php
+namespace App\Repositories;
+
+use App\Models\{{NAME}};
+
+class {{NAME}}Repository extends Repository
+{
+    public function model()
+    {
+        return {{NAME}}::class;
+    }
+    
+    public function getMappings()
+    {
+        $mappings   = [
+            'id'    => [
+                'type'  => 'integer',
+            ],
+        ];
+        
+        return $mappings;
+    }
+    
+    public function prepareSearchData($model)
+    {
+        $data = [
+            // Use psd snippet
+            'id'            => $model->id,
+            
+        ];
+    
+        return $data;
+    }
+}
